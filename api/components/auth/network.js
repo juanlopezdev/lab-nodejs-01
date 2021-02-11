@@ -1,0 +1,19 @@
+const express = require('express');
+
+const response = require('../../../network/response');
+const { lista } = require('../../../store/dummy');
+const Controller = require('./index')
+
+const router = express.Router();
+
+module.exports = router;
+
+router.post('/login', function (req, res) {
+  Controller.login(req.body.username, req.body.password)
+  .then(token => {
+    response.success(req, res, token, 200);
+  })
+  .catch(e => {
+    response.error(req, res, 'Información inválida', 400);
+  })
+})
