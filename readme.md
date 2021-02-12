@@ -6,7 +6,7 @@ Esta laboratorio se basa en el **Curso Práctico de Nodejs** de Platzi impartido
 
 ## Instalación
 
-Ejecutar el comando y listo 😀
+Instalar dependencias 😀
 ```
 npm i
 ```
