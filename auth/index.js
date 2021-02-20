@@ -1,3 +1,4 @@
+const { json } = require('body-parser');
 const jwt = require('jsonwebtoken');
 const config = require('../config');
 const error = require('../utils/error');
@@ -5,7 +6,8 @@ const error = require('../utils/error');
 const secret = config.jwt.secret;
 
 function sign(data) {
-  return jwt.sign(data, secret);
+  let jsonData = JSON.parse(JSON.stringify(data));
+  return jwt.sign(jsonData, secret);
 }
 
 function verify(token) {

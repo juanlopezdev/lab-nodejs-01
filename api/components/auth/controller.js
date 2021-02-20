@@ -20,7 +20,7 @@ module.exports = function (injectedStore) {
         } else {
           throw new Error('Información inválida')
         }
-      })
+      }).catch(err => console.log(err))
   }
 
   async function upsert(data) {
