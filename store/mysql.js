@@ -74,7 +74,7 @@ function update(table, data) {
 }
 
 function upsert(table, data) {
-  const isEmptyData = Object.entries(data).length === 0 ? true : false;
+  //const isEmptyData = Object.entries(data).length === 0 ? true : false;
 
   if (data && data.id) {
     return update(table, data)

@@ -6,7 +6,7 @@ const error = require('../utils/error');
 const secret = config.jwt.secret;
 
 function sign(data) {
-  let jsonData = JSON.parse(JSON.stringify(data));
+  let jsonData = JSON.parse(JSON.stringify(data)); // https://stackoverflow.com/questions/47117709/payload-error-in-jsonwebtoken
   return jwt.sign(jsonData, secret);
 }
 
@@ -17,10 +17,13 @@ function verify(token) {
 const check = {
   own: function (req, owner) {
     const decoded = decodeHeader(req);
-    console.log(decoded)
     if (decoded.id !== owner) {
       throw error('No puedes hacer esto', 401);
     }
+  },
+
+  logged: function (req) {
+    const decoded = decodeHeader(req);
   }
 }
 
