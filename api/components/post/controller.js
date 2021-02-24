@@ -17,7 +17,7 @@ module.exports = function (injectedStore) {
     return store.get(TABLE, id);
   }
 
-   function upsert(body) {
+  async function upsert(body) {
     const post = {
       text: body.text,
       user: body.user

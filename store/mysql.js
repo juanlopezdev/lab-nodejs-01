@@ -47,8 +47,9 @@ function list(table) {
 }
 
 function get(table, id) {
+  console.log('get:', table, id);
   return new Promise((resolve, reject) => {
-    connection.query(`SELECT * FROM ${table} WHERE id=${id}`, (err, data) => {
+    connection.query(`SELECT * FROM ${table} WHERE id='${id}'`, (err, data) => {
       if (err) return reject(err);
       resolve(data[0])
     })
@@ -73,15 +74,13 @@ function update(table, data) {
   })
 }
 
-function upsert(table, data) {
-  //const isEmptyData = Object.entries(data).length === 0 ? true : false;
-  console.log('inertar', data);
-  if (data && data.id) {
-    console.log('actualizar', data);
-    return update(table, data)
+async function upsert(table, data) {
+  const row = await get(table, data.id);
+  if (row) {
+    return update(table, data);
+  } else {
+    return insert(table, data);
   }
-
-  return insert(table, data);
 }
 
 function query(table, query, join) {
