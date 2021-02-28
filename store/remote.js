@@ -7,9 +7,17 @@ function createRemoteDB(host, port) {
     return req('GET', table);
   }
 
-  // function get(table, id)
-  // function upsert(table, data)
-  // function query(table, query, join)
+  function get(table, id) {
+    return req('GET', table, id)
+  }
+
+  //  function upsert(table, data) {
+  //   return req('PUT', table, data)
+  //  }
+
+  // function query(table, query, join) {
+  //   return req('GET', table, data)
+  // }
 
   function req(method, table, data) {
     let url = URL + '/' + table;
