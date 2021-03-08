@@ -6,8 +6,8 @@ Esta laboratorio se basa en el **Curso Práctico de Nodejs** de Platzi impartido
 
 * [Instalación](#instalación)
 * [Gestión de microservicios con PM2](#gestión-de-microservicios-con-PM2)
-* [Diccionario](#diccionario)
 * [Problemas y soluciones](#problemas-y-soluciones)
+* [Diccionario](#diccionario)
 
 ## Instalación
 
@@ -49,14 +49,12 @@ pm2 stop all
 pm2 stop 0
 ```
 
+## Problemas y soluciones
+
+* 🔗 [npm o node no funciona en mi terminal al instalar nvm](https://gist.github.com/juanlopezdev/06f72d6b301881803bd830ff27710e7a#problema-1-npm-o-node--v-no-funciona-en-mi-terminal)
+
 ## Diccionario
 
 * **Serverless**: La computación sin servidor (o serverless para abreviar) es un modelo de ejecución en el que el proveedor en la nube (AWS, Azure o Google Cloud) es responsable de ejecutar un fragmento de código mediante la asignación dinámica de los recursos. 
 * **Zeit Now**: Plataforma serverless
-
-## Problemas y soluciones
-
-* npm o node no funciona en mi terminal [link](https://gist.github.com/juanlopezdev/06f72d6b301881803bd830ff27710e7a#problema-1-npm-o-node--v-no-funciona-en-mi-terminal)
-
-<script src="https://gist.github.com/juanlopezdev/06f72d6b301881803bd830ff27710e7a.js"></script>
 
