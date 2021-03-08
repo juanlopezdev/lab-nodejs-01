@@ -58,5 +58,5 @@ pm2 stop 0
 
 * npm o node no funciona en mi terminal [link](https://gist.github.com/juanlopezdev/06f72d6b301881803bd830ff27710e7a#problema-1-npm-o-node--v-no-funciona-en-mi-terminal)
 
-<script src="https://gist.github.com/juanlopezdev/06f72d6b301881803bd830ff27710e7a#problema-1-npm-o-node--v-no-funciona-en-mi-terminal"></script>
+<script src="https://gist.github.com/juanlopezdev/06f72d6b301881803bd830ff27710e7a.js"></script>
 
