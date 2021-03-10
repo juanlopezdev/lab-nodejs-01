@@ -57,4 +57,5 @@ pm2 stop 0
 
 * **Serverless**: La computación sin servidor (o serverless para abreviar) es un modelo de ejecución en el que el proveedor en la nube (AWS, Azure o Google Cloud) es responsable de ejecutar un fragmento de código mediante la asignación dinámica de los recursos. 
 * **Zeit Now**: Plataforma serverless
-
+* **Caché**: El Cache es una forma más rápida de servir contenido que ya conocemos.
+* **Redis**: BD en memoria. Hace que toda la gestión automática y sencilla
